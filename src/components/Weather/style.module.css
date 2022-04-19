@@ -1,0 +1,15 @@
+.container{
+    width: 60vw;
+    min-height: 100vh;
+    height: auto;
+    repear: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-image: url('../../assets/clear.jpg');
+}
+
+header{
+    padding: 30px 80px;
+    color: white;
+    font-weight: 600;
+}

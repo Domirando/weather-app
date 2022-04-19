@@ -1,0 +1,15 @@
+.container{
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container :first-child{
+    color: #b0b0b0;
+}
+.container :first-child:hover{
+    cursor: pointer;
+}
+.container:last-child{
+    color: #fff;
+}
