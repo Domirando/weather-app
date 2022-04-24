@@ -13,6 +13,12 @@ let reducer = (state=initialState, action) => {
             return {
                 ...state,
                 city: action.payload.name,
+                wind: Math.round(action.payload.wind.speed),
+                icon: action.payload.weather[0].icon,
+                weather: action.payload.weather[0].main,
+                temp: Math.round(action.payload.main.temp),
+                humidity: Math.round(action.payload.main.humidity),
+                cloudy: Math.round(action.payload.clouds.all),
                 loading: false
             }
         case actions.FETCH_WEATHER_FAILURE:

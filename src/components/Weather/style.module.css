@@ -11,7 +11,9 @@
     background-image: url('../../assets/clear.jpg');
     padding: 30px 80px;
 }
-
+img{
+    margin-bottom: -15px;
+}
 header{
     color: white;
     font-weight: 600;

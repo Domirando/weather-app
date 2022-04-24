@@ -25,7 +25,6 @@ export const fetchWeather = () => {
         axios.get('http://api.openweathermap.org/data/2.5/weather?q=Tashkent,Uzbekistan&units=metric&appid=0d9442bf0fb284af058318ac2bcf816d')
             .then(res => {
                 const info = res.data
-                console.log('this is info', info)
                 dispatch(fetchWeatherSuccess(info))
             }).catch(error => {
                 dispatch(fetchWeatherFailure(error.message))
