@@ -1,10 +1,10 @@
 import Item from '../Item'
-
+import { useSelector } from 'react-redux'
 function CitiesList() {
-    let uzb_cities = ['Toshkent', 'Samarqand', 'Fargo`na', 'Xiva', 'Andijon']
+    const cities = useSelector(state => state.cities)
     return (
         <div>
-            {uzb_cities.map((item, index) => (
+            {cities.map((item, index) => (
                 <Item key={index} playload={item}/>
             ))}
         </div>

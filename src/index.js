@@ -5,10 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
 import store from './redux/store'
-
+const preloadedState = window.__PRELOADED_STATE__
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={store}>
+  <Provider store={store} serverState={preloadedState}>
     <React.StrictMode>
       <App />
     </React.StrictMode>

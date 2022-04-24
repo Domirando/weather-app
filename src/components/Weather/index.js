@@ -1,6 +1,8 @@
 import styles from './style.module.css'
+import {useSelector} from 'react-redux'
 
 function Weather() {
+    // const currentState = useSelector(state => state.)
     return (
         <div className={styles.container}>
             <header>
