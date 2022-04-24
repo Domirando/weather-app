@@ -1,7 +1,7 @@
 import Item from '../Item'
 import { useSelector } from 'react-redux'
 function CitiesList() {
-    const cities = useSelector(state => state.cities)
+    const cities = useSelector(state => state.location.cities)
     return (
         <div>
             {cities.map((item, index) => (

@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Item from '../../components/Item'
 import style from './style.module.css'
+import {useDispatch} from 'react-redux'
+import {locationChanged} from '../../redux/actions'
 const DataDetails = () => {
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(locationChanged)
+    }, [])
+
     return (
         <div className={style.container}>
             <h3>

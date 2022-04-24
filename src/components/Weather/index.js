@@ -1,8 +1,13 @@
 import styles from './style.module.css'
-import {useSelector} from 'react-redux'
-
+import {fetchWeather} from '../../redux/actions'
+import {useSelector, useDispatch} from 'react-redux'
+import {useEffect} from 'react'
 function Weather() {
-    // const currentState = useSelector(state => state.)
+    const currentState = useSelector(state => state.weatherInfo)
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(fetchWeather())
+    }, [])
     return (
         <div className={styles.container}>
             <header>
@@ -12,7 +17,7 @@ function Weather() {
                 <h1>26&deg;</h1>
                 <div className={styles.selector}>
                 <span>
-                    <p>London</p>
+                    <p>{currentState.city}</p>
                     <p>10:34-Tuesday, 22 Oct &apos;19</p>
                 </span>
                 <span>

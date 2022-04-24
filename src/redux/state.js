@@ -1,6 +1,17 @@
 export const state = {
-    cities: ['Tashkent', 'Samarqand', 'Khiwa', 'Andijon', 'Buxoro', 'Sirdaryo', 'Qashqadaryo', 'Jizzax', 'Fergana'],
+    location: {
+        cities: ['Tashkent', 'Samarqand', 'Khiwa', 'Andijon', 'Buxoro', 'Sirdaryo', 'Qashqadaryo', 'Jizzax', 'Fergana'],
+        searchLocation: ''
+    },
     weatherInfo: {
-        city: 'Tashkent',
-    }
+        city: 'Samarkand',
+        humidity: '',
+        cloudy: '',
+        icon: '',
+        temp: '',
+        wind: '',
+        rain: ''
+    },
+    error: ''
 }
+
