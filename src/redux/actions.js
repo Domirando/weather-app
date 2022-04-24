@@ -7,8 +7,8 @@ export const locationChanged = city => ({
         city
     }
 })
-export const fetchWeatherRequest = city => ({
-    type: actions.FETCH_WEATHER_REQUEST,
+export const fetchWeatherRequest = () => ({
+    type: actions.FETCH_WEATHER_REQUEST
 })
 export const fetchWeatherSuccess = info => ({
     type: actions.FETCH_WEATHER_SUCCESS,
@@ -25,7 +25,7 @@ export const fetchWeather = () => {
         axios.get('http://api.openweathermap.org/data/2.5/weather?q=Tashkent,Uzbekistan&units=metric&appid=0d9442bf0fb284af058318ac2bcf816d')
             .then(res => {
                 const info = res.data
-                console.log(info)
+                console.log('this is info', info)
                 dispatch(fetchWeatherSuccess(info))
             }).catch(error => {
                 dispatch(fetchWeatherFailure(error.message))

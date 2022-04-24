@@ -3,7 +3,7 @@ import {fetchWeather} from '../../redux/actions'
 import {useSelector, useDispatch} from 'react-redux'
 import {useEffect} from 'react'
 function Weather() {
-    const currentState = useSelector(state => state.weatherInfo)
+    const currentState = useSelector(state => state)
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fetchWeather())

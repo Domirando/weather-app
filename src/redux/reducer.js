@@ -9,9 +9,10 @@ let reducer = (state=initialState, action) => {
                 loading: true
             }
         case actions.FETCH_WEATHER_SUCCESS:
+            console.log('action info', action.payload)
             return {
                 ...state,
-                city: action.payload,
+                city: action.payload.name,
                 loading: false
             }
         case actions.FETCH_WEATHER_FAILURE:
