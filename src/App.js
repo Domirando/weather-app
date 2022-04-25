@@ -8,7 +8,7 @@ import {useDispatch} from "react-redux";
 function App() {
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(fetchWeather('Tashkent'))
+        dispatch(fetchWeather('Andijan'))
     }, [])
     return (
         <div className="container">

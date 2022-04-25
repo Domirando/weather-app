@@ -3,9 +3,7 @@ import axios from 'axios'
 
 export const locationChanged = city => ({
     type: actions.LOCATION_CHANGED,
-    payload: {
-        city
-    }
+    payload: city
 })
 export const fetchWeatherRequest = () => ({
     type: actions.FETCH_WEATHER_REQUEST

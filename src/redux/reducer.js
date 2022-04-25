@@ -1,6 +1,7 @@
 import * as actions from './actionType'
 import { state as initialState} from './state'
-const api_key = '0d9442bf0fb284af058318ac2bcf816d'
+import {fetchWeather} from './actions'
+
 let reducer = (state=initialState, action) => {
     switch(action.type){
         case actions.FETCH_WEATHER_REQUEST:
@@ -10,7 +11,6 @@ let reducer = (state=initialState, action) => {
             }
         case actions.FETCH_WEATHER_SUCCESS:
             console.log('action info', action.payload);
-            // let hours = millitime.toLocaleString("en-US", {hour: "numeric"});
             return {
                 ...state,
                 city: action.payload.name,
