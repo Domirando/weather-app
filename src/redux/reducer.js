@@ -9,7 +9,8 @@ let reducer = (state=initialState, action) => {
                 loading: true
             }
         case actions.FETCH_WEATHER_SUCCESS:
-            console.log('action info', action.payload)
+            console.log('action info', action.payload);
+            // let hours = millitime.toLocaleString("en-US", {hour: "numeric"});
             return {
                 ...state,
                 city: action.payload.name,
@@ -19,6 +20,11 @@ let reducer = (state=initialState, action) => {
                 temp: Math.round(action.payload.main.temp),
                 humidity: Math.round(action.payload.main.humidity),
                 cloudy: Math.round(action.payload.clouds.all),
+                weekday: (new Date(Date.now()  + 1000 * (action.payload.timezone / 3600))).toLocaleString("en-US", {weekday: "long"}),
+                hours: (new Date(Date.now()  + 1000 * (action.payload.timezone / 3600))).toLocaleString("en-US", {hour: "numeric"}),
+                minutes: (new Date(Date.now()  + 1000 * (action.payload.timezone / 3600))).toLocaleString("en-US", {minute: "numeric"}),
+                day: (new Date(Date.now()  + 1000 * (action.payload.timezone / 3600))).toLocaleString("en-US", {weekday: "long"}),
+                month: (new Date(Date.now()  + 1000 * (action.payload.timezone / 3600))).toLocaleString("en-US", {month: "long"}),
                 loading: false
             }
         case actions.FETCH_WEATHER_FAILURE:

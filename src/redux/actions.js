@@ -19,10 +19,10 @@ export const fetchWeatherFailure = error => ({
     type: actions.FETCH_WEATHER_FAILURE,
     payload: error
 })
-export const fetchWeather = () => {
+export const fetchWeather = (city) => {
     return function(dispatch) {
         dispatch(fetchWeatherRequest)
-        axios.get('http://api.openweathermap.org/data/2.5/weather?q=Tashkent,Uzbekistan&units=metric&appid=0d9442bf0fb284af058318ac2bcf816d')
+        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city},Uzbekistan&units=metric&appid=0d9442bf0fb284af058318ac2bcf816d`)
             .then(res => {
                 const info = res.data
                 dispatch(fetchWeatherSuccess(info))

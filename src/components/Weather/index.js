@@ -13,7 +13,7 @@ function Weather() {
                 <div className={styles.selector}>
                 <span>
                     <p>{currentState.city}</p>
-                    <p>10:34-Tuesday, 22 Oct &apos;19</p>
+                    <p>{`${currentState.hours}:${currentState.minutes} - ${currentState.weekday}, ${currentState.day}, ${currentState.month}`}</p>
                 </span>
                 <span>
                     <img src={`https://openweathermap.org/img/w/${currentState.icon}.png`}/>
