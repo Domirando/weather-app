@@ -1,12 +1,17 @@
 import React from 'react';
 import styles from "./style.module.css";
-import {useState} from "react";
+import {useState, useEffect} from "react";
+import {useDispatch} from 'react-redux'
+import {searchTerm} from '../../redux/actions'
 
 const Search = () => {
     let [placeholder, setPlaceholder] = useState('Another location')
+    const dispatch = useDispatch()
+    useEffect(()=>{
+        dispatch(searchTerm(placeholder))
+    }, [placeholder])
     let handleChange = (e) => {
         setPlaceholder(e.target.value)
-        console.log(placeholder)
     }
     let handleSubmit = (e) => {
         e.prevetDefault()

@@ -33,6 +33,12 @@ let reducer = (state=initialState, action) => {
                 error: action.payload,
                 loading: false
             }
+        case actions.SEARCH_TERM:
+            console.log(action.payload)
+            return {
+                ...state,
+                searchCity: action.payload
+            }
         default:
             return state
     }

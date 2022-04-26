@@ -1,9 +1,9 @@
 import './App.css';
 import {useEffect} from 'react'
-import {fetchWeather} from './redux/actions'
+import {fetchWeather, searchTerm} from './redux/actions'
 import Weather from './components/Weather'
 import WeatherDetails from './components/WeatherDetails'
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 function App() {
     const dispatch = useDispatch()

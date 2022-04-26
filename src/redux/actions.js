@@ -5,6 +5,10 @@ export const locationChanged = city => ({
     type: actions.LOCATION_CHANGED,
     payload: city
 })
+export const searchTerm = search => ({
+    type: actions.SEARCH_TERM,
+    payload: search
+})
 export const fetchWeatherRequest = () => ({
     type: actions.FETCH_WEATHER_REQUEST
 })
