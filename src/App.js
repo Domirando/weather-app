@@ -7,8 +7,10 @@ import {useDispatch, useSelector} from "react-redux";
 
 function App() {
     const dispatch = useDispatch()
+    const search = useSelector(state=>state.searchCity)
     useEffect(() => {
         dispatch(fetchWeather('Andijan'))
+        dispatch(searchTerm(search))
     }, [])
     return (
         <div className="container">
