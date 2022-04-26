@@ -9,7 +9,7 @@ function App() {
     const dispatch = useDispatch()
     const search = useSelector(state=>state.searchCity)
     useEffect(() => {
-        dispatch(fetchWeather('Andijan'))
+        dispatch(fetchWeather('Tashkent'))
         dispatch(searchTerm(search))
     }, [])
     return (

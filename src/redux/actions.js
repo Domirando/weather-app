@@ -24,7 +24,7 @@ export const fetchWeatherFailure = error => ({
 export const fetchWeather = (city) => {
     return function(dispatch) {
         dispatch(fetchWeatherRequest)
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city},Uzbekistan&units=metric&appid=0d9442bf0fb284af058318ac2bcf816d`)
+        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city},Uzbekistan&units=metric&appid=ffd1a9773308499102f2b2fc06fe080f`)
             .then(res => {
                 const info = res.data
                 dispatch(fetchWeatherSuccess(info))
